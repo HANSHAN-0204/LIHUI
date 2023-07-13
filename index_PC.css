@@ -158,7 +158,7 @@ img.oc {
     height: 8rem;
     background: linear-gradient(to bottom, rgba(242, 225, 215, 1), rgba(242, 225, 215, 0.5));
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
