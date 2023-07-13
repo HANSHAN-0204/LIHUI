@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <title>黎隳</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="index_PC.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="index_M.css">
+    <link rel="shortcut icon" href="算你倒楣.ico">
+</head>
+
+<body>
+
+    <div id="ocPlace">
+        <div id="show">
+            <div class="center" id="tem1">
+                <p class="input">請輸入您的姓名</p>
+            </div>
+            <div class="center">
+                <input id="name">
+            </div>
+            <div class="center">
+                <p class="input">請選擇您的性別</p>
+            </div>
+            <div class="center">
+                <button class="gender" onclick="girl()">女生</button>
+                <button class="gender" onclick="boy()">男生</button>
+            </div>
+        </div>
+        <button id="button1"></button>
+        <button id="button2"></button>
+        <button id="button3"></button>
+        <button id="button4"></button>
+        <button id="button5"></button>
+        <button id="button6"></button>
+        <button id="button7"></button>
+        <img class="oc" src="oc.jpg">
+    </div>
+
+    <div id="ocSentence">
+        <p id="sentence" class="introduction">初次見面，我叫黎隳。不好意思，請問你叫什麼名字？</p>
+    </div>
+
+    <script>
+
+        var button1 = document.getElementById("button1");
+        var button2 = document.getElementById("button2");
+        var button3 = document.getElementById("button3");
+        var button4 = document.getElementById("button4");
+        var button5 = document.getElementById("button5");
+        var button6 = document.getElementById("button6");
+        var button7 = document.getElementById("button7");
+        var sentence = document.getElementById("sentence");
+        var gender = 1;
+
+        function girl() {
+            document.getElementById("show").style.display = 'none';
+            gender = 0;
+            button1.style.display = 'block';
+            button2.style.display = 'block';
+            button3.style.display = 'block';
+            button4.style.display = 'block';
+            button5.style.display = 'block';
+            button6.style.display = 'block';
+            button7.style.display = 'block';
+        }
+
+        function boy() {
+            document.getElementById("show").style.display = 'none';
+            gender = 1;
+            button1.style.display = 'block';
+            button2.style.display = 'block';
+            button3.style.display = 'block';
+            button4.style.display = 'block';
+            button5.style.display = 'block';
+            button6.style.display = 'block';
+            button7.style.display = 'block';
+        }
+
+        button1.addEventListener("click", function () {
+            sentence.textContent = "你說頭上的角嗎？我們龍族都有的。";
+        });
+
+        button2.addEventListener("click", function () {
+            var nameInput = document.getElementById("name");
+            var name = nameInput.value;
+            if (gender == 0) {
+                sentence.textContent = name + "姐姐想看我的作品嗎？下次有機會帶給你看吧。";
+            }
+            else {
+                sentence.textContent = "別翻了，我身上沒有帶著作品。";
+            }
+        });
+
+        button3.addEventListener("click", function () {
+            sentence.textContent = "不好意思，請問這個地方怎麽走呢？";
+        });
+
+        button4.addEventListener("click", function () {
+            sentence.textContent = "有機會的話，請讓我拍組照片。";
+        });
+
+        button5.addEventListener("click", function () {
+            sentence.textContent = "有機會的話，請讓我拍組照片。";
+        });
+
+        button6.addEventListener("click", function () {
+            var nameInput = document.getElementById("name");
+            var name = nameInput.value;
+            if (gender == 0) {
+                sentence.textContent = name + "姐姐，你也想看看天上的世界嗎？";
+            }
+            else {
+                sentence.textContent = name + "先生，請不要隨意觸碰我的翅膀。";
+            }
+        });
+
+        button7.addEventListener("click", function () {
+            var nameInput = document.getElementById("name");
+            var name = nameInput.value;
+            if (gender == 0) {
+                sentence.textContent = name + "姐姐，你也想看看天上的世界嗎？";
+            }
+            else {
+                sentence.textContent = name + "先生，請不要隨意觸碰我的翅膀。";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
